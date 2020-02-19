@@ -104,9 +104,18 @@
     </div>
   </form>
 </div>
+<script type="text/javascript">
+  document.onkeypress = enter;
+  function enter() {
+    if (window.event.keyCode == 13) {
+      return false;
+    }
+  }
+</script>
 <script src="../js/jquery-3.4.1.min.js" th:src="@{/js/jquery-3.4.1.min.js}"></script>
 <script src="../js/popper.min.js" th:src="@{/js/popper.min.js}"></script>
 <script src="../js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+
 </body>
 
 </html>
