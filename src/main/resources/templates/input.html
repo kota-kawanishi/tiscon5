@@ -92,6 +92,15 @@
     </div>
   </form>
 </div>
+<script src="http://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+
+
+<!-- ▼郵便番号入力フィールド(7桁) -->
+<input type="text" name="zip21" size="4" maxlength="3"> - <input type="text" name="zip22" size="5" maxlength="4" onKeyUp="AjaxZip3.zip2addr('zip21','zip22','addr21','addr21');">
+<!-- ▼住所入力フィールド(都道府県+以降の住所) -->
+<input type="text" name="addr21" size="40">
+
+
 <script type="text/javascript">
   document.onkeypress = enter;
   function enter() {
