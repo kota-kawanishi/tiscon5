@@ -115,11 +115,11 @@ public class EstimateController {
      * @param model         遷移先に連携するデータ
      * @return 遷移先
      */
-    @PostMapping(value = "order", params = "backToConfirm")
+   @PostMapping(value = "order", params = "backToConfirm")
     String backToConfirm(UserOrderForm userOrderForm, Model model) {
         model.addAttribute("prefectures", estimateDAO.getAllPrefectures());
         model.addAttribute("userOrderForm", userOrderForm);
-        return "confirm";
+        return "input";
     }
 
     /**
