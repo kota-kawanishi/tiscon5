@@ -49,7 +49,12 @@ public class EstimateController {
     @GetMapping("input")
     String input(Model model) {
         if (!model.containsAttribute("userOrderForm")) {
-            model.addAttribute("userOrderForm", new UserOrderForm());
+            UserOrderForm form = new UserOrderForm();
+            form.setBox("0");
+            form.setBed("0");
+            form.setBicycle("0");
+            form.setWashingMachine("0");
+            model.addAttribute("userOrderForm", form);
         }
 
         model.addAttribute("prefectures", estimateDAO.getAllPrefectures());
@@ -110,11 +115,11 @@ public class EstimateController {
      * @param model         遷移先に連携するデータ
      * @return 遷移先
      */
-    @PostMapping(value = "order", params = "backToConfirm")
+   @PostMapping(value = "order", params = "backToConfirm")
     String backToConfirm(UserOrderForm userOrderForm, Model model) {
         model.addAttribute("prefectures", estimateDAO.getAllPrefectures());
         model.addAttribute("userOrderForm", userOrderForm);
-        return "confirm";
+        return "input";
     }
 
     /**
