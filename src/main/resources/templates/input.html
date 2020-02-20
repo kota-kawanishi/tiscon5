@@ -22,36 +22,36 @@
       <fieldset>
         <legend>個人情報</legend>
         <div class="form-group">
-          <label for="customerName">氏名   例:( 横山　岳 )</label>
+          <label for="customerName"><font color = "red">(必須) </font>氏名    例:[ 横山　岳 ]</label>
           <input type="text" id="customerName" name="customerName" th:field="*{customerName}" class="form-control" value="山田太郎"/>
         </div>
         <div class="form-group">
-          <label for="tel">連絡先TEL   例:( 090-0000-0000 )</label>
+          <label for="tel"><font color = "red">(必須) </font>連絡先TEL     例:[ 09000000000 ]</label>
           <input type="tel" id="tel" name="tel" th:field="*{tel}" class="form-control" value="03-1234-5678"/>
         </div>
         <div class="form-group">
-          <label for="email">連絡先メールアドレス</label>
+          <label for="email"><font color = "blue">(任意) </font>連絡先メールアドレス</label>
           <input type="text" id="email" name="email" th:field="*{email}" class="form-control" value="test@test.com"/>
         </div>
         <div class="form-group">
-          <label for="oldPrefectureId">現住所（都道府県）</label>
+          <label for="oldPrefectureId"><font color = "red">(必須) </font>現住所  [ 都道府県 ]</label>
           <select id="oldPrefectureId" name="oldPrefectureId" class="form-control">
             <option th:each="prefecture : ${prefectures}" th:value="${prefecture.prefectureId}" th:field="*{oldPrefectureId}">[[${prefecture.prefectureName}]]</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="oldAddress">現住所（市区町村以下）</label>
+          <label for="oldAddress"><font color = "blue">(任意) </font>現住所 [ 市区町村以下 ]</label>
           <input type="text" id="oldAddress" name="oldAddress" th:field="*{oldAddress}"
                  class="form-control" value="新宿区西新宿1-1-1"/>
         </div>
         <div class="form-group">
-          <label for="newPrefectureId">転居先住所（都道府県）</label>
+          <label for="newPrefectureId"><font color = "red">(必須) </font> 転居先住所 [ 都道府県 ]</label>
           <select id="newPrefectureId" name="newPrefectureId" class="form-control">
             <option th:each="prefecture : ${prefectures}" th:value="${prefecture.prefectureId}" th:field="*{newPrefectureId}">[[${prefecture.prefectureName}]]</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="newAddress">転居先住所（市区町村以下）</label>
+          <label for="newAddress"><font color = "blue">(任意) </font>転居先住所 [ 市区町村以下 ]</label>
           <input type="text" id="newAddress" name="newAddress" th:field="*{newAddress}" class="form-control"
                  value="札幌市南区1"/>
         </div>
@@ -59,24 +59,24 @@
       <fieldset>
         <legend>荷物情報</legend>
         <div class="form-group">
-          <label for="box">段ボールの個数</label>
+          <label for="box"><font color = "blue">(任意) </font>段ボールの個数</label>
           <input type="text" id="box" name="box" th:field="*{box}" class="form-control" value="10"/>
         </div>
         <div class="form-group">
-          <label for="bed">ベッドの個数</label>
+          <label for="bed"><font color = "blue">(任意) </font>ベッドの個数</label>
           <input type="text" id="bed" name="bed" th:field="*{bed}" class="form-control" value="3"/>
         </div>
         <div class="form-group">
-          <label for="bicycle">自転車の個数</label>
+          <label for="bicycle"><font color = "blue">(任意) </font>自転車の個数</label>
           <input type="text" id="bicycle" name="bicycle" th:field="*{bicycle}" class="form-control" value="1"/>
         </div>
         <div class="form-group">
-          <label for="washingMachine">洗濯機の個数</label>
+          <label for="washingMachine"><font color = "blue">(任意) </font>洗濯機の個数</label>
           <input type="text" id="washingMachine" name="washingMachine" th:field="*{washingMachine}" class="form-control"
                  value="1"/>
         </div>
         <div class="form-group">
-          <label for="washingMachineInstallation">洗濯機の設置工事申し込み</label>
+          <label for="washingMachineInstallation"><font color = "blue">(任意) </font>洗濯機の設置工事申し込み</label>
           <select id="washingMachineInstallation" name="washingMachineInstallation" class="form-control" th:field="*{washingMachineInstallation}">
             <option th:value="false" th:text="なし">なし</option>
             <option th:value="true" th:text="あり">あり</option>
