@@ -196,3 +196,7 @@ ul.label {
 td {
     width: 400px;
 }
+
+.findError {
+	background-color: #ffb6c1;
+}
